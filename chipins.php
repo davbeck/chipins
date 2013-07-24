@@ -18,9 +18,9 @@ function chipins_short_code($atts)
 		'name' => '',
 		'total' => 0,
 		'raised' => 0,
-		'campus_id' => 32316,//LS Sparks
-		'fund_id' => 10549,//Sparks Expantion 2013
-		'suggested_amount' => '',
+		'campus_id' => false,
+		'fund_id' => false,
+		'suggested_amount' => false,
 		'description' => false,
 	), $atts);
 	
