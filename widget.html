@@ -1,0 +1,92 @@
+<style>
+
+.chipins {
+	border: solid rgb(80,90,80);
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	
+	margin: 20px 0px;
+	padding: 10px;
+}
+
+.chipins-header {
+	margin-top: 0px !important;
+	margin-bottom: 10px !important;
+}
+
+.chipins-name {
+	font-size: 1.5em;
+}
+
+.chipins-raised {
+	color: #197800;
+}
+
+.chipins-give {
+	width: 80%;
+	text-align: right;
+}
+
+.chipins-total-progress {
+	display: inline-block;
+	width: 92%;
+	height: 30px;
+	
+	border: solid rgb(120,120,120) 1px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	overflow: hidden;
+	/* IE10 Consumer Preview */ 
+	background-image: -ms-linear-gradient(top, #D9D9D9 0%, #FFFFFF 100%);
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(top, #D9D9D9 0%, #FFFFFF 100%);
+	/* Opera */ 
+	background-image: -o-linear-gradient(top, #D9D9D9 0%, #FFFFFF 100%);
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #D9D9D9), color-stop(1, #FFFFFF));
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(top, #D9D9D9 0%, #FFFFFF 100%);
+	/* W3C Markup, IE10 Release Preview */ 
+	background-image: linear-gradient(to bottom, #D9D9D9 0%, #FFFFFF 100%);
+}
+
+.chipins-raised-progress {
+	display: inline-block;
+	height: 100%;
+	
+	/* IE10 Consumer Preview */ 
+	background-image: -ms-linear-gradient(top, #0B7000 0%, #085400 100%);
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(top, #0B7000 0%, #085400 100%);
+	/* Opera */ 
+	background-image: -o-linear-gradient(top, #0B7000 0%, #085400 100%);
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #0B7000), color-stop(1, #085400));
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(top, #0B7000 0%, #085400 100%);
+	/* W3C Markup, IE10 Release Preview */ 
+	background-image: linear-gradient(to bottom, #0B7000 0%, #085400 100%);
+}
+
+.chipins-percentage {
+	line-height: 30px;
+	float: right;
+	width: 7%;
+	text-align: left;
+}
+
+.chipins-give {
+	margin-bottom: 0px !important;
+}
+
+</style>
+
+<div class="chipins" id="%name_id%">
+	<h3 class="chipins-header"><span class="chipins-name">%name%</span>: <span class="chipins-raised">%raised%</span> of <span class="chipins-total">%total%</span> raised.</h3>
+	
+	%if(description)%<p class="chipins-description">%description%</p>%endif(description)%
+	
+	<span class="chipins-total-progress"><span class="chipins-raised-progress" style="width: %percentage_limited%%;"></span></span><span class="chipins-percentage">%percentage%%</span>
+	
+	<p class="chipins-give"><a class="chipins-link" href="https://livingstones.onthecity.org/give?campus_id=%campus_id%&fund_id=%fund_id%&suggested_amount=%suggested_amount%" target="_blank">Give to %name%</a></p>
+</div>
