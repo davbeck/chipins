@@ -2,7 +2,7 @@
 /*
 Plugin Name: Chipins
 Plugin URI: http://davidbeck.co
-Description: Adds shortcode for a giving registry
+Description: A Wordpress plugin that adds a short code to show giving progress with a link to give using [The City](http://www.onthecity.org).
 Version: 1.0
 Author: David Beck
 Author URI: http://davidbeck.co
